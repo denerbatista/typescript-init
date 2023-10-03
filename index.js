@@ -20,8 +20,40 @@ function numberRandom() {
     variavel3 = Math.random();
     console.log(variavel3);
 }
+// função com retorno (no caso retorna um numero)
 function numberRandomReturn() {
-    return Math.random();
+    return Math.floor(Math.random() + 1);
 }
 console.log(numberRandomReturn());
 numberRandom();
+let mulher = {
+    nome: "Rita",
+    idade: 28,
+    altura: 1.73,
+    peso: 85,
+    etnia: "negra"
+};
+let pedreiro = {
+    funcao: "pedreiro",
+    admissao: "25/10/2022",
+    nome: "Osvaldo",
+    idade: 30,
+    altura: 1.85,
+    peso: 90,
+    etnia: "Branco",
+    trabalhar() {
+        return "morcegando";
+    }
+};
+class Pedreiro {
+    constructor(_funcao, _admissao) {
+        this.funcao = _funcao;
+        this.admissao = _admissao;
+    }
+    trabalhar() {
+        return "morcegando";
+    }
+}
+let funcionario = new Pedreiro("armador", "25/08/2008");
+console.log(funcionario.trabalhar);
+funcionario.trabalhar();
